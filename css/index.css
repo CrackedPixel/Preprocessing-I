@@ -175,6 +175,12 @@ header {
   flex-flow: column nowrap;
   font-variant: small-caps;
 }
+@media (max-width: 500px) {
+  header {
+    align-items: center;
+    max-width: 100%;
+  }
+}
 header .titlePage {
   width: 100%;
   font-size: 3.5rem;
@@ -182,16 +188,29 @@ header .titlePage {
   font-family: Impact, Courier, Monaco, monospace;
   color: #2e4152;
 }
+@media (max-width: 500px) {
+  header .titlePage {
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+}
 header .subtitlePage {
   width: 100%;
   font-size: 1.1rem;
   margin-bottom: 0.7rem;
   color: #60646b;
 }
+@media (max-width: 500px) {
+  header .subtitlePage {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
+}
 header .mainNav {
   color: #dbe3f0;
   background-color: #60646b;
-  border-radius: 10px;
+  border-radius: 1rem;
   height: 3rem;
   font-size: 0.9rem;
   width: 90%;
@@ -229,6 +248,11 @@ header .mainNav a:hover {
   align-items: flex-start;
   flex-flow: column wrap;
 }
+@media (max-width: 500px) {
+  .topSection .aboutHeading {
+    margin-left: 0.5rem;
+  }
+}
 .topSection .aboutContainer {
   width: 100%;
   display: flex;
@@ -262,11 +286,22 @@ header .mainNav a:hover {
   width: 100%;
   margin: 1rem 0;
 }
+@media (max-width: 500px) {
+  .skillContainer {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
 .skillContainer .skillItem {
   display: flex;
   justify-content: space-between;
   width: 50%;
   margin: 0.1rem 0 0.1rem;
+}
+@media (max-width: 500px) {
+  .skillContainer .skillItem {
+    width: 90%;
+  }
 }
 .skillContainer .skillItem .skillBarHolder {
   display: flex;
@@ -340,11 +375,21 @@ header .mainNav a:hover {
   display: flex;
   width: 100%;
 }
+@media (max-width: 500px) {
+  .aboutInfoContainer {
+    flex-direction: column-reverse;
+  }
+}
 .aboutInfoBox {
   width: 30%;
   margin-left: 7rem;
   display: flex;
   flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  .aboutInfoBox {
+    margin-left: 2.3rem;
+  }
 }
 .aboutInfoBox .aboutInfoInfo {
   display: flex;
@@ -374,6 +419,11 @@ header .mainNav a:hover {
 .aboutInfoDescContainer {
   display: flex;
   align-items: flex-start;
+}
+@media (max-width: 500px) {
+  .aboutInfoDescContainer {
+    margin-top: 2rem;
+  }
 }
 .aboutInfoDescContainer .aboutInfoPortrait {
   display: flex;
@@ -422,6 +472,11 @@ header .mainNav a:hover {
   display: flex;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .bottomSection .tileTitleText {
+    margin-left: 1rem;
+  }
+}
 .bottomSection ul {
   margin-left: 6.2rem;
   font-size: 0.8rem;
@@ -429,6 +484,11 @@ header .mainNav a:hover {
   color: #dbe3f0;
   display: flex;
   flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  .bottomSection ul {
+    margin-left: 2rem;
+  }
 }
 .bottomSection ul .tileListContent {
   display: flex;
