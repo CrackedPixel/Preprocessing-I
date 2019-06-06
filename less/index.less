@@ -57,3 +57,394 @@ html, body {
     height: 100%;
 }
 
+/* My CSS Starts here */
+/** Mixins **/
+.marginAutoLR(){
+	margin-left: auto;
+	margin-right: auto;
+}
+/** End mixins **/
+
+/** Variables **/
+@primaryColour1: rgb(219,227,240);
+@primaryColour2: white;
+@accentColour1: rgb(84,201,236);
+@accentColour2: rgb(54,153,220);
+@bgColour1: rgb(48,65,83);
+@greyColour1: rgb(96, 100, 107);
+@titleColour1: rgb(46,65,82);
+@titleColour2: @greyColour1;
+
+@font-size-about: 1.2rem;
+@font-size-h2: 1.2rem;
+@font-size-h3: 0.8rem;
+@font-size-n: 0.7rem;
+/** End Variables**/
+
+
+/** icon colours **/
+@fbico: #3b5998;
+@twitico: #1da1f2;
+@liico: #0077B5;
+@gpico: #db4a39;
+#fbico{
+	color: @fbico;
+}
+#twitterico{
+	color: @twitico;
+}
+#googleplusico{
+	color: @gpico;
+}
+#linkedinico{
+	color: @liico;
+}
+/** end icons **/
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-size: 62.5%;
+}
+.wholePage{
+	max-width: 700px;
+	.marginAutoLR();
+	font-size: 1rem;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+header{
+	max-width: 70%;
+	.marginAutoLR();
+	margin-top: 2rem;
+	display: flex;
+	flex-flow: column nowrap;
+	font-variant: small-caps;
+	@media(max-width: 500px){
+		align-items: center;
+		max-width: 100%;
+	}
+	.titlePage{
+		width: 100%;
+		font-size: 3.5rem;
+		letter-spacing: 0.1rem;
+		font-family: Impact, Courier, Monaco, monospace;
+		color: @titleColour1;
+		@media(max-width: 500px){
+			text-align: center;
+			margin-bottom: 0.6rem;
+		}
+	}
+	.subtitlePage{
+		width: 100%;
+		font-size: 1.1rem;
+		margin-bottom: 0.7rem;
+		color: @titleColour2;
+		@media(max-width: 500px){
+			.marginAutoLR();
+			display: none;
+		}
+	}
+	.mainNav{
+		color: @primaryColour1;
+		background-color: @greyColour1;
+		border-radius: 1rem;
+		height: 3rem;
+		font-size: 0.9rem;
+		width: 90%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		margin-bottom: 2.5rem;
+		a, a:active, a:visited { color: @primaryColour1; }
+		a{
+			text-decoration: none;
+		}
+		a:not(:first-child):before {
+			content: " | ";
+			color: @primaryColour1;
+		}
+		a:hover{
+			text-decoration: underline;
+			color: white;
+		}
+	}
+}
+
+
+
+.topSection{
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	.marginAutoLR();
+	.aboutHeading{
+		margin-left: 6rem;
+		display: flex;
+		align-items: flex-start;
+		flex-flow: column wrap;
+	}
+	@media(max-width: 500px){
+		.aboutHeading{
+			margin-left: 0.5rem;
+		}
+	}
+	.aboutContainer{
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.shapeBG{
+		width: 9rem;
+		height: @font-size-about + 0.5rem;
+		transform: skew(-20deg);
+		background: grey;
+	}
+	.aboutTitle{
+		// left: -@font-size-about - 0.2rem;
+		color: @primaryColour1;
+		margin-left: 1rem;
+		font-size: @font-size-about;
+		margin-top: 0.22rem;
+		transform: skew(20deg);
+	}
+
+	.aboutInfoContainer{
+		width: 100%;
+	}
+}
+
+.aboutHR{
+	margin-left: auto;
+	height: 2px;
+	width: 67%;
+	background-color:@accentColour1;
+}
+
+
+.skillBar(){
+	display: flex;
+	width: 80%;
+	background-color:lightgrey;
+	border-radius: 0.5rem;
+	height: 1rem;
+}
+.basicSkillbar(){
+	display: flex;
+	content: "";
+	background-color: @accentColour2;
+	border-radius: 0.5rem;
+}
+
+.skillContainer{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	margin: 1rem 0;
+	@media(max-width: 500px){
+		flex-flow: column wrap;
+		align-items: center;
+	}
+	.skillItem{
+		display: flex;
+		justify-content: space-between;
+		width: 50%;
+		margin: 0.1rem 0 0.1rem;
+		@media(max-width: 500px){
+			width: 90%;
+		}
+		.skillBarHolder{
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			width: 100%;
+		}
+		.skillBar60{
+			.skillBar();
+		}
+		.skillBar60:before{
+			.basicSkillbar();
+			width: 60%;
+		}
+		.skillBar80{
+			.skillBar();
+		}
+		.skillBar80:before{
+			.basicSkillbar();
+			width: 80%;
+		}
+		.skillBar90{
+			.skillBar();
+		}
+		.skillBar90:before{
+			.basicSkillbar();
+			width: 90%;
+		}
+		.skillBar20{
+			.skillBar();
+		}
+		.skillBar20:before{
+			.basicSkillbar();
+			width: 20%;
+		}
+		.skillText{
+			width: 20%;
+			display: flex;
+			font-size: 0.8rem;
+			margin-left: 0.5rem;
+		}
+	}
+}
+
+
+
+.aboutInfoContainer{
+	display: flex;
+	width: 100%;
+	@media(max-width: 500px){
+		flex-direction: column-reverse;
+	}
+}
+.aboutInfoBox{
+	width: 30%;
+	margin-left: 7rem;
+	display: flex;
+	flex-flow: column nowrap;
+	@media(max-width: 500px){
+		margin-left: 2.3rem;
+	}
+	.aboutInfoInfo{
+		display: flex;
+		width: 100%;
+		flex-flow: column nowrap;
+		margin-top: 1rem;
+		.aboutInfoItem{
+			display: flex;
+			width: auto;
+			.aboutInfoListName{
+				width: 3rem;
+				// border: 1px solid black;
+				color: @greyColour1;
+				font-weight: bold;
+				font-size: 0.8rem;
+			}
+			.aboutInfoListInfo{
+				font-size: 0.8rem;
+			}
+		}
+	}
+	.aboutInfoSocialMedia{
+		display: flex;
+		justify-content: space-between;
+		margin: 1.5rem 0 1.5rem;
+		width: 80%;
+	}
+}
+
+.aboutInfoDescContainer{
+	display: flex;
+	align-items: flex-start;
+	@media(max-width: 500px){
+		margin-top: 2rem;
+	}
+	.aboutInfoPortrait{
+		display: flex;
+		width: 30%;
+		border-right: 2px @accentColour1 solid;
+		img{
+			margin-left: 2.3rem;
+			width: 70%;
+			height: 70%;
+		}
+	}
+	.aboutInfoDescText{
+		margin-left: 1rem;
+		padding-right: 3rem;
+		display: flex;
+		width: 70%;
+		font-size: 0.9rem;
+	}
+}
+
+
+
+.bottomSection{
+	background-color: @bgColour1;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	color: @primaryColour1;
+	.tileContainer{
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	.tileTitle{
+		width: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: baseline;
+		margin-top: 2rem;
+	}
+	.tileTitleText{
+		margin-left: 5.5rem;
+		font-size: @font-size-h2;
+		height: @font-size-h2+0.5rem;
+		width: @font-size-h2*6;
+		padding-left: 0.6rem;
+		background: @accentColour2;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		@media(max-width: 500px){
+			margin-left: 1rem;
+		}
+	}
+
+
+	ul{
+		margin-left: 6.2rem;
+		font-size: @font-size-h3;
+		list-style-type: circle;
+		color:@primaryColour1;
+		display: flex;
+		flex-flow: column nowrap;
+		@media(max-width: 500px){
+			margin-left: 2rem;
+		}
+		.tileListContent{
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			margin-top: 1rem;
+			.tileListTitle{
+				width: 8rem;
+				font-weight: bold;
+			}
+			.tileListSubtitle{
+				text-align: center;
+				vertical-align: middle;
+				background-color: @accentColour2;
+				border-radius: 5px;
+				padding-top: 0.2rem;
+				height: 1.2rem;
+				width: 4.2rem;
+			}
+			.tileListDesc{
+				margin-top: 0.5rem;
+				width: 100%;
+				padding-right: 4rem;
+			}
+		}
+	}
+	
+}
+
+footer{
+	display: flex;
+	margin: 3.5rem auto 2.5rem auto;
+}
+
+.greyscale{
+	-webkit-filter: grayscale(100%);
+ 	filter: grayscale(100%);
+}

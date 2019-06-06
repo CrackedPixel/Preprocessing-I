@@ -1,1 +1,524 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* My CSS Starts here */
+/** Mixins **/
+/** End mixins **/
+/** Variables **/
+/** End Variables**/
+/** icon colours **/
+#fbico {
+  color: #3b5998;
+}
+#twitterico {
+  color: #1da1f2;
+}
+#googleplusico {
+  color: #db4a39;
+}
+#linkedinico {
+  color: #0077B5;
+}
+/** end icons **/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 62.5%;
+}
+.wholePage {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+header {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  font-variant: small-caps;
+}
+@media (max-width: 500px) {
+  header {
+    align-items: center;
+    max-width: 100%;
+  }
+}
+header .titlePage {
+  width: 100%;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+  font-family: Impact, Courier, Monaco, monospace;
+  color: #2e4152;
+}
+@media (max-width: 500px) {
+  header .titlePage {
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+}
+header .subtitlePage {
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  color: #60646b;
+}
+@media (max-width: 500px) {
+  header .subtitlePage {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
+}
+header .mainNav {
+  color: #dbe3f0;
+  background-color: #60646b;
+  border-radius: 1rem;
+  height: 3rem;
+  font-size: 0.9rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+header .mainNav a,
+header .mainNav a:active,
+header .mainNav a:visited {
+  color: #dbe3f0;
+}
+header .mainNav a {
+  text-decoration: none;
+}
+header .mainNav a:not(:first-child):before {
+  content: " | ";
+  color: #dbe3f0;
+}
+header .mainNav a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.topSection {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.topSection .aboutHeading {
+  margin-left: 6rem;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column wrap;
+}
+@media (max-width: 500px) {
+  .topSection .aboutHeading {
+    margin-left: 0.5rem;
+  }
+}
+.topSection .aboutContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.topSection .shapeBG {
+  width: 9rem;
+  height: 1.7rem;
+  transform: skew(-20deg);
+  background: grey;
+}
+.topSection .aboutTitle {
+  color: #dbe3f0;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  margin-top: 0.22rem;
+  transform: skew(20deg);
+}
+.topSection .aboutInfoContainer {
+  width: 100%;
+}
+.aboutHR {
+  margin-left: auto;
+  height: 2px;
+  width: 67%;
+  background-color: #54c9ec;
+}
+.skillContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 1rem 0;
+}
+@media (max-width: 500px) {
+  .skillContainer {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
+.skillContainer .skillItem {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0.1rem 0 0.1rem;
+}
+@media (max-width: 500px) {
+  .skillContainer .skillItem {
+    width: 90%;
+  }
+}
+.skillContainer .skillItem .skillBarHolder {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+}
+.skillContainer .skillItem .skillBar60 {
+  display: flex;
+  width: 80%;
+  background-color: lightgrey;
+  border-radius: 0.5rem;
+  height: 1rem;
+}
+.skillContainer .skillItem .skillBar60:before {
+  display: flex;
+  content: "";
+  background-color: #3699dc;
+  border-radius: 0.5rem;
+  width: 60%;
+}
+.skillContainer .skillItem .skillBar80 {
+  display: flex;
+  width: 80%;
+  background-color: lightgrey;
+  border-radius: 0.5rem;
+  height: 1rem;
+}
+.skillContainer .skillItem .skillBar80:before {
+  display: flex;
+  content: "";
+  background-color: #3699dc;
+  border-radius: 0.5rem;
+  width: 80%;
+}
+.skillContainer .skillItem .skillBar90 {
+  display: flex;
+  width: 80%;
+  background-color: lightgrey;
+  border-radius: 0.5rem;
+  height: 1rem;
+}
+.skillContainer .skillItem .skillBar90:before {
+  display: flex;
+  content: "";
+  background-color: #3699dc;
+  border-radius: 0.5rem;
+  width: 90%;
+}
+.skillContainer .skillItem .skillBar20 {
+  display: flex;
+  width: 80%;
+  background-color: lightgrey;
+  border-radius: 0.5rem;
+  height: 1rem;
+}
+.skillContainer .skillItem .skillBar20:before {
+  display: flex;
+  content: "";
+  background-color: #3699dc;
+  border-radius: 0.5rem;
+  width: 20%;
+}
+.skillContainer .skillItem .skillText {
+  width: 20%;
+  display: flex;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.aboutInfoContainer {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .aboutInfoContainer {
+    flex-direction: column-reverse;
+  }
+}
+.aboutInfoBox {
+  width: 30%;
+  margin-left: 7rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  .aboutInfoBox {
+    margin-left: 2.3rem;
+  }
+}
+.aboutInfoBox .aboutInfoInfo {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  margin-top: 1rem;
+}
+.aboutInfoBox .aboutInfoInfo .aboutInfoItem {
+  display: flex;
+  width: auto;
+}
+.aboutInfoBox .aboutInfoInfo .aboutInfoItem .aboutInfoListName {
+  width: 3rem;
+  color: #60646b;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.aboutInfoBox .aboutInfoInfo .aboutInfoItem .aboutInfoListInfo {
+  font-size: 0.8rem;
+}
+.aboutInfoBox .aboutInfoSocialMedia {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0 1.5rem;
+  width: 80%;
+}
+.aboutInfoDescContainer {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 500px) {
+  .aboutInfoDescContainer {
+    margin-top: 2rem;
+  }
+}
+.aboutInfoDescContainer .aboutInfoPortrait {
+  display: flex;
+  width: 30%;
+  border-right: 2px #54c9ec solid;
+}
+.aboutInfoDescContainer .aboutInfoPortrait img {
+  margin-left: 2.3rem;
+  width: 70%;
+  height: 70%;
+}
+.aboutInfoDescContainer .aboutInfoDescText {
+  margin-left: 1rem;
+  padding-right: 3rem;
+  display: flex;
+  width: 70%;
+  font-size: 0.9rem;
+}
+.bottomSection {
+  background-color: #304153;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  color: #dbe3f0;
+}
+.bottomSection .tileContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.bottomSection .tileTitle {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  margin-top: 2rem;
+}
+.bottomSection .tileTitleText {
+  margin-left: 5.5rem;
+  font-size: 1.2rem;
+  height: 1.7rem;
+  width: 7.2rem;
+  padding-left: 0.6rem;
+  background: #3699dc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .bottomSection .tileTitleText {
+    margin-left: 1rem;
+  }
+}
+.bottomSection ul {
+  margin-left: 6.2rem;
+  font-size: 0.8rem;
+  list-style-type: circle;
+  color: #dbe3f0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  .bottomSection ul {
+    margin-left: 2rem;
+  }
+}
+.bottomSection ul .tileListContent {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+.bottomSection ul .tileListContent .tileListTitle {
+  width: 8rem;
+  font-weight: bold;
+}
+.bottomSection ul .tileListContent .tileListSubtitle {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #3699dc;
+  border-radius: 5px;
+  padding-top: 0.2rem;
+  height: 1.2rem;
+  width: 4.2rem;
+}
+.bottomSection ul .tileListContent .tileListDesc {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding-right: 4rem;
+}
+footer {
+  display: flex;
+  margin: 3.5rem auto 2.5rem auto;
+}
+.greyscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
